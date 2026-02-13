@@ -70,17 +70,17 @@
     <div class="row g-4">
       <div class="col-lg-7 fade-up">
         <div class="table-responsive table-bsgro">
-          <table class="table table-striped mb-0">
+          <table class="table table-striped table-cards mb-0">
             <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
             <tbody>
-              <tr><td>Высота растения</td><td>200–350 см</td></tr>
-              <tr><td>Сахаристость сока стебля</td><td>10–18% (Brix)</td></tr>
-              <tr><td>Урожайность зелёной массы (богара)</td><td>300 ц/га</td></tr>
-              <tr><td>Урожайность зерна</td><td>25–50 ц/га (плёнчатое, кормовое)</td></tr>
-              <tr><td>Транспирационный коэффициент</td><td>150–200 (кукуруза: 300–400)</td></tr>
-              <tr><td>Глубина корневой системы</td><td>до 2,0–2,5 м</td></tr>
-              <tr><td>Минимум осадков</td><td>от 320 мм/год</td></tr>
-              <tr><td>Дуррины (цианогенные гликозиды)</td><td>Значительно ниже, чем у зернового; устраняются термообработкой</td></tr>
+              <tr><td data-label="Параметр">Высота растения</td><td data-label="Значение">200–350 см</td></tr>
+              <tr><td data-label="Параметр">Сахаристость сока стебля</td><td data-label="Значение">10–18% (Brix)</td></tr>
+              <tr><td data-label="Параметр">Урожайность зелёной массы (богара)</td><td data-label="Значение">300 ц/га</td></tr>
+              <tr><td data-label="Параметр">Урожайность зерна</td><td data-label="Значение">25–50 ц/га (плёнчатое, кормовое)</td></tr>
+              <tr><td data-label="Параметр">Транспирационный коэффициент</td><td data-label="Значение">150–200 (кукуруза: 300–400)</td></tr>
+              <tr><td data-label="Параметр">Глубина корневой системы</td><td data-label="Значение">до 2,0–2,5 м</td></tr>
+              <tr><td data-label="Параметр">Минимум осадков</td><td data-label="Значение">от 320 мм/год</td></tr>
+              <tr><td data-label="Параметр">Дуррины (цианогенные гликозиды)</td><td data-label="Значение">Значительно ниже, чем у зернового; устраняются термообработкой</td></tr>
             </tbody>
           </table>
         </div>
@@ -215,34 +215,54 @@
     <p class="section-subtitle fade-up">От мобильного мини-цеха до промышленного хаба с биоэтанолом</p>
 
     <div class="table-responsive table-bsgro mb-5 fade-up">
-      <table class="table mb-0">
+      <table class="table table-cards mb-0" id="tableProcessing">
         <thead>
           <tr>
             <th>Масштаб</th>
             <th>Сироп, кг/день</th>
-            <th>CAPEX, млн ₽</th>
+            <th>CAPEX, млн&nbsp;₽</th>
             <th>Персонал</th>
-            <th>Площадь посевов, га</th>
+            <th>Посевы, га</th>
             <th>Окупаемость</th>
             <th>Биоэтанол</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="scale-badge mobile">Мобильный</span></td>
-            <td>25–50</td><td>1,5–3</td><td>2–3</td><td>10–50</td><td>3–5 сезонов</td><td>—</td>
+            <td data-label="Масштаб"><span class="scale-badge mobile">Мобильный</span></td>
+            <td data-label="Сироп, кг/день">25–50</td>
+            <td data-label="CAPEX, млн ₽">1,5–3</td>
+            <td data-label="Персонал">2–3</td>
+            <td data-label="Посевы, га">10–50</td>
+            <td data-label="Окупаемость">3–5 сезонов</td>
+            <td data-label="Биоэтанол">—</td>
           </tr>
           <tr>
-            <td><span class="scale-badge station">Стационарный</span></td>
-            <td>100–300</td><td>5–12</td><td>4–6</td><td>50–300</td><td>2–4 сезона</td><td>—</td>
+            <td data-label="Масштаб"><span class="scale-badge station">Стационарный</span></td>
+            <td data-label="Сироп, кг/день">100–300</td>
+            <td data-label="CAPEX, млн ₽">5–12</td>
+            <td data-label="Персонал">4–6</td>
+            <td data-label="Посевы, га">50–300</td>
+            <td data-label="Окупаемость">2–4 сезона</td>
+            <td data-label="Биоэтанол">—</td>
           </tr>
           <tr>
-            <td><span class="scale-badge medium">Средний</span></td>
-            <td>500–1200</td><td>20–45</td><td>8–15</td><td>500–2000</td><td>2–3 сезона</td><td>—</td>
+            <td data-label="Масштаб"><span class="scale-badge medium">Средний</span></td>
+            <td data-label="Сироп, кг/день">500–1200</td>
+            <td data-label="CAPEX, млн ₽">20–45</td>
+            <td data-label="Персонал">8–15</td>
+            <td data-label="Посевы, га">500–2000</td>
+            <td data-label="Окупаемость">2–3 сезона</td>
+            <td data-label="Биоэтанол">—</td>
           </tr>
           <tr>
-            <td><span class="scale-badge industrial">Промышленный</span></td>
-            <td>≥1500</td><td>80–200</td><td>20–40</td><td>3000–15 000</td><td>3–5 лет</td><td><i class="bi bi-check-lg text-success"></i></td>
+            <td data-label="Масштаб"><span class="scale-badge industrial">Промышленный</span></td>
+            <td data-label="Сироп, кг/день">≥1500</td>
+            <td data-label="CAPEX, млн ₽">80–200</td>
+            <td data-label="Персонал">20–40</td>
+            <td data-label="Посевы, га">3000–15 000</td>
+            <td data-label="Окупаемость">3–5 лет</td>
+            <td data-label="Биоэтанол"><i class="bi bi-check-lg text-success"></i> Да</td>
           </tr>
         </tbody>
       </table>
@@ -342,15 +362,15 @@
     </div>
 
     <div class="table-responsive table-bsgro mt-4 fade-up">
-      <table class="table mb-0">
+      <table class="table table-cards mb-0" id="tableMargin">
         <thead><tr><th>Культура</th><th>Тип продукта</th><th>Особенности затрат</th><th>Профиль маржи</th></tr></thead>
         <tbody>
-          <tr><td>Пшеница</td><td>Зерно</td><td>Высокая доля удобрений и СЗР</td><td>Низкая, волатильная</td></tr>
-          <tr><td>Подсолнечник</td><td>Семена на масло</td><td>Высокая стоимость семян и СЗР, вынос NPK</td><td>Средняя, волатильная</td></tr>
-          <tr><td>Сорго (зерно)</td><td>Зерно фуражное + побочная масса</td><td>Менее требовательно к удобрениям</td><td>Средняя, стабильная</td></tr>
-          <tr><td>Сорго (силос)</td><td>Зелёная масса</td><td>Логистика силосования</td><td>Высокая при стабильном спросе</td></tr>
-          <tr><td>Сорго (сироп)</td><td>Глюкозно-мальтозный сироп</td><td>CAPEX мини-цех + энергоёмкость</td><td>Потенциально высокая</td></tr>
-          <tr><td>Сорго (пеллеты)</td><td>Топливо, сорбент</td><td>CAPEX доп. оборудование</td><td>Высокая, стабильная</td></tr>
+          <tr><td data-label="Культура">Пшеница</td><td data-label="Тип продукта">Зерно</td><td data-label="Затраты">Высокая доля удобрений и СЗР</td><td data-label="Маржа">Низкая, волатильная</td></tr>
+          <tr><td data-label="Культура">Подсолнечник</td><td data-label="Тип продукта">Семена на масло</td><td data-label="Затраты">Высокая стоимость семян и СЗР, вынос NPK</td><td data-label="Маржа">Средняя, волатильная</td></tr>
+          <tr><td data-label="Культура">Сорго (зерно)</td><td data-label="Тип продукта">Зерно фуражное + побочная масса</td><td data-label="Затраты">Менее требовательно к удобрениям</td><td data-label="Маржа">Средняя, стабильная</td></tr>
+          <tr><td data-label="Культура">Сорго (силос)</td><td data-label="Тип продукта">Зелёная масса</td><td data-label="Затраты">Логистика силосования</td><td data-label="Маржа">Высокая при стабильном спросе</td></tr>
+          <tr><td data-label="Культура">Сорго (сироп)</td><td data-label="Тип продукта">Глюкозно-мальтозный сироп</td><td data-label="Затраты">CAPEX мини-цех + энергоёмкость</td><td data-label="Маржа">Потенциально высокая</td></tr>
+          <tr><td data-label="Культура">Сорго (пеллеты)</td><td data-label="Тип продукта">Топливо, сорбент</td><td data-label="Затраты">CAPEX доп. оборудование</td><td data-label="Маржа">Высокая, стабильная</td></tr>
         </tbody>
       </table>
     </div>
