@@ -432,14 +432,6 @@ footer .copy { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 2rem
 .accordion-button:focus { box-shadow: none; border-color: var(--clr-green); }
 .accordion-button::after { filter: hue-rotate(90deg); }
 .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.4); }
-
-/* Badge inside table header */
-.table-bsgro thead th[style*="background:var(--clr-green)"],
-.table-bsgro thead th[style*="background: var(--clr-green)"] {
-  position: relative;
-}
-
-/* Sorgo link highlight in index */
 a[href="sorgo.html"].nav-link { position: relative; }
 a[href="sorgo.html"].nav-link::after {
   content: '';
@@ -452,11 +444,95 @@ a[href="sorgo.html"].nav-link::after {
   background: var(--clr-green);
   border-radius: 2px;
 }
-
-/* Hero breadcrumb on sorgo page */
 .breadcrumb { font-size: 0.85rem; }
 .breadcrumb-item a { text-decoration: none; }
 .breadcrumb-item a:hover { text-decoration: underline; }
-
-/* Section number badges */
 .badge.bg-success.rounded-pill { vertical-align: middle; }
+
+/* ===== SOURCES SECTION ===== */
+.source-link {
+  display: block;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #E8ECF0;
+  color: var(--clr-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+.source-link:hover { color: var(--clr-green); padding-left: 6px; }
+.source-link .source-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+.source-link .source-tag.gov { background: #E3F2FD; color: var(--clr-blue); }
+.source-link .source-tag.sci { background: #E8F5E9; color: var(--clr-green); }
+.source-link .source-tag.stat { background: #FFF3E0; color: #E65100; }
+.source-link .source-tag.media { background: #F3E5F5; color: #7B1FA2; }
+
+/* ===== QR SECTION ===== */
+.qr-card { text-align: center; }
+.qr-card img { border-radius: var(--radius); border: 3px solid var(--clr-bg-alt); }
+.vcard-btn {
+  display: inline-block;
+  background: var(--clr-green);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+.vcard-btn:hover { background: var(--clr-green-deep); color: white; transform: translateY(-2px); }
+
+/* ===== ENHANCED MOBILE (<900px) ===== */
+@media (max-width: 899px) {
+  .hero { padding: 4rem 0 2.5rem; }
+  .hero h1 { font-size: 1.4rem; }
+  .hero .lead { font-size: 0.9rem; }
+  .hero .d-flex.flex-wrap { gap: 0.25rem !important; }
+  .hero .btn-sm { font-size: 0.65rem !important; padding: 0.2rem 0.5rem !important; }
+  .stat-number { font-size: 1.8rem; }
+  .stat-label { font-size: 0.75rem; }
+  .section-title { font-size: 1.3rem; }
+  .section-subtitle { font-size: 0.85rem; }
+  .card-custom { margin-bottom: 0; }
+  .card-icon { width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 0.75rem; }
+  .bar-label { width: 90px !important; font-size: 0.72rem !important; }
+  .bar-fill { font-size: 0.65rem !important; padding-left: 6px !important; }
+  .reason-item { gap: 0.75rem; }
+  .reason-num { width: 36px; height: 36px; font-size: 0.9rem; }
+  .participant-card { padding: 0.75rem; }
+  .participant-role { font-size: 0.8rem; }
+  .participant-org { font-size: 0.75rem; }
+  /* 6F grid: 3 columns on tablet, 2 on phone */
+  .row > [class*="col-md-2"] { flex: 0 0 33.333%; max-width: 33.333%; }
+  /* Footer columns stack */
+  footer .row > [class*="col-md"] { flex: 0 0 100%; max-width: 100%; margin-bottom: 1.5rem; }
+  /* Ensure tables scroll */
+  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* Hero stat boxes stack 2x2 */
+  .hero .col-6 { flex: 0 0 50%; max-width: 50%; }
+  /* QR card smaller */
+  .qr-card img { max-width: 140px; }
+}
+
+@media (max-width: 575px) {
+  .hero h1 { font-size: 1.25rem; }
+  .hero .lead { font-size: 0.82rem; }
+  section { padding: 2.5rem 0; }
+  .bar-label { width: 70px !important; font-size: 0.65rem !important; }
+  .stat-number { font-size: 1.5rem; }
+  .row > [class*="col-md-2"] { flex: 0 0 33.333%; max-width: 33.333%; }
+  .btn-hero { font-size: 0.85rem; padding: 0.6rem 1.2rem; }
+  /* Stack hero buttons */
+  .hero .btn-hero + .btn-hero { margin-left: 0 !important; margin-top: 0.5rem; display: block; width: fit-content; }
+  .qr-card img { max-width: 120px; }
+}
